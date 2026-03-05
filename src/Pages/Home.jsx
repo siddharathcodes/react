@@ -6,7 +6,7 @@ import axios from 'axios'
 function Home(){
     const [person, personDetail] = useState([])
      const fetchblogs = async  ()=>{
-        const response = await  axios.get("https://mern-node-3lic.onrender.com/")
+        const response = await  axios.get("https://mern-node-3lic.onrender.com/blog")
        personDetail(response.data.data)
      }
     useEffect(()=>{
