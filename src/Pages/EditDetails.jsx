@@ -52,7 +52,7 @@ const createDetail = async (e) => {
 };
 
  const fetchSingleData = async ()=>{
- const response =   await  axios.get("https://mern-node-3lic.onrender.com/blog" + id)
+ const response =   await  axios.get("https://mern-node-3lic.onrender.com/blog/" + id)
  if(response.status === 200){
 
  setData({
