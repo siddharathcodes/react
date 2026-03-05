@@ -9,7 +9,7 @@ function SingleDetails(props) {
     const {id} = useParams()
     const [detail, setDetail] = useState({})
    const fetchSingleData = async ()=>{
- const response =   await  axios.get("https://mern-node-3lic.onrender.com/blog/" + id)
+ const response =   await  axios.get("https://mern-node-1.onrender.com/blog/" + id)
    setDetail(response.data.data);
    }
     useEffect(()=>{
@@ -36,7 +36,7 @@ function SingleDetails(props) {
         <div className="bg-white py-24 sm:py-32">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <div className="mx-auto max-w-4xl text-center">
-        <img src={`https://mern-node-1.onrender.com/blog/Storage/${detail.Photo}`}/>
+        <img src={`https://mern-node-1.onrender.com/Storage/${detail.Photo}`} />
         <div className="flex justify-between mx-auto">
             <Link to = {`/edit/${detail._id}`}>
             <button className="p-5 mx-2 border-2 outline-0 bg-amber-300 text-blue-500 rounded-2xl text-3xl">Edit me </button>
