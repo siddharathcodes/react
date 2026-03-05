@@ -34,11 +34,14 @@ const handleChnage = (e)=>{
 const createDetail = async (e) => {
   e.preventDefault();
 
-  const formData = new FormData();
-  formData.append("Name", data.Name);
-  formData.append("Age", data.Age);
-  formData.append("Grade", data.Grade);
+const formData = new FormData();
+formData.append("Name", data.Name);
+formData.append("Age", data.Age);
+formData.append("Grade", data.Grade);
+
+if(data.Photo){
   formData.append("Photo", data.Photo);
+}
 
   try {
     await axios.patch(
