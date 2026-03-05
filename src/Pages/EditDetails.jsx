@@ -42,7 +42,7 @@ const createDetail = async (e) => {
 
   try {
     await axios.patch(
-    `https://mern-node-3lic.onrender.com/${id}`,formData,
+    `https://mern-node-3lic.onrender.com${id}`,formData,
     );
 
     navigate("/");
@@ -52,7 +52,7 @@ const createDetail = async (e) => {
 };
 
  const fetchSingleData = async ()=>{
- const response =   await  axios.get("https://mern-node-3lic.onrender.com/" + id)
+ const response =   await  axios.get("https://mern-node-3lic.onrender.com" + id)
  if(response.status === 200){
 
  setData({

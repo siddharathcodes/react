@@ -9,7 +9,7 @@ function SingleDetails(props) {
     const {id} = useParams()
     const [detail, setDetail] = useState({})
    const fetchSingleData = async ()=>{
- const response =   await  axios.get("http://localhost:3000/blog/" + id)
+ const response =   await  axios.get("https://mern-node-3lic.onrender.com/" + id)
    setDetail(response.data.data);
    }
     useEffect(()=>{
@@ -17,7 +17,7 @@ function SingleDetails(props) {
     },[id])
 
         const  deleteme = async ()=>{
-            const response = await axios.delete(`http://localhost:3000/blog/${id}`)
+            const response = await axios.delete(`https://mern-node-3lic.onrender.com${id}`)
             console.log(response.status)
 
             if(response.status === 200){
