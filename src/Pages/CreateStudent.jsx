@@ -41,7 +41,7 @@ const createDetail = async (e) => {
 
   try {
     await axios.post(
-      "https://mern-node-3lic.onrender.com/blog/",
+      "https://mern-node-1.onrender.com/blog",
       formData,
     );
 

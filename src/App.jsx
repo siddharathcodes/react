@@ -7,8 +7,6 @@ import EditDetails from './Pages/EditDetails.jsx'
 
 
 
-
-
 const App = () => {
   return (
     <div>
